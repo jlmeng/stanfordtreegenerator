@@ -7,6 +7,7 @@
     margin-left: -285px;
 
     background: rgba(217, 222, 222, 0.46);
+    border-color: rgb(163, 163, 163);
     border-radius: 10px;
     border-width: 1px;
 }
@@ -32,6 +33,7 @@
     margin-left: 15px;
 
     background: rgba(0, 150, 136, 0.17);
+    border-color: rgb(163, 163, 163);
     border-radius: 10px;
     border-width: 1px;
 
