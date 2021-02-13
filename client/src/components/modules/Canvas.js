@@ -19,7 +19,7 @@ class Canvas extends Component {
     }
 
     render() {
-        console.log(this.props.treeNum)
+        /* console.log(this.props.treeNum) */
         return (
             <div className="Canvas-container">
                 <img className="Canvas-tree" src={this.props.treeNames[this.props.treeNum]}></img>

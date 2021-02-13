@@ -15,35 +15,60 @@ class Generator extends Component {
             eyesNum: 0,
             eyesNames: ["images/eyes1.png", "images/eyes2.png", "images/eyes3.png"],
             mouthNum: 0,
-            mouthNames: ["images/mouth1.png", "images/mouth2.png", "images/mouth3.png"]
+            mouthNames: ["images/mouth1.png", "images/mouth2.png", "images/mouth3.png"],
+            time: Date.now()
         }
         this.componentRef = React.createRef();
     }
 
     componentDidMount() {
-       
+        
     }
 
+    
+
     rngNumbers = () => {
+        let lastTime = Date.now()
+        let currentTime = Date.now()
+        let counter = 0;
+        while (counter < 10) {
+            currentTime = Date.now()
+            /* console.log(currentTime); */
+            if (currentTime-lastTime > 100) {
+                this.rngOnce();
+                this.forceUpdate();
+                lastTime = currentTime;
+                counter += 1;
+            }
+        }
+        
+    }
+
+    async rngOnce() {
+
         const min = 0;
         const maxTree = this.state.treeNames.length;
         let randTree = this.state.treeNum;
-        while (randTree === this.state.treeNum) {
-            randTree = min + Math.floor(Math.random() * (maxTree - min));
-        }
-        const maxEyes = this.state.eyesNames.length;
         let randEyes = this.state.eyesNum;
-        while (randEyes === this.state.eyesNum) {
-            randEyes = min + Math.floor(Math.random() * (maxEyes - min));
-        }
-        const maxMouth = this.state.mouthNames.length;
         let randMouth = this.state.mouthNum;
-        while (randMouth === this.state.mouthNum) {
-            randMouth = min + Math.floor(Math.random() * (maxMouth - min));
-        }
-        this.setState({treeNum: randTree, eyesNum: randEyes, mouthNum: randMouth});
+  
+                while (randTree === this.state.treeNum) {
+                    randTree = min + Math.floor(Math.random() * (maxTree - min));
+                }
+                const maxEyes = this.state.eyesNames.length;
+                
+                while (randEyes === this.state.eyesNum) {
+                    randEyes = min + Math.floor(Math.random() * (maxEyes - min));
+                }
+                const maxMouth = this.state.mouthNames.length;
+                
+                while (randMouth === this.state.mouthNum) {
+                    randMouth = min + Math.floor(Math.random() * (maxMouth - min));
+                }
+                this.setState({treeNum: randTree, eyesNum: randEyes, mouthNum: randMouth});
+
     }
-ß
+
     render() {
         
         return (
