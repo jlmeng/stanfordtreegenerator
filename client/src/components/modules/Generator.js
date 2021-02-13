@@ -17,6 +17,7 @@ class Generator extends Component {
             mouthNum: 0,
             mouthNames: ["images/mouth1.png", "images/mouth2.png", "images/mouth3.png"]
         }
+        this.componentRef = React.createRef();
     }
 
     componentDidMount() {
@@ -46,10 +47,14 @@ class Generator extends Component {
     render() {
         
         return (
-            <div>
-                <button className="Button-text Button-generate" onClick={this.rngNumbers}>Generate</button> 
-                <Canvas treeNum={this.state.treeNum} treeNames={this.state.treeNames} eyesNum={this.state.eyesNum} eyesNames={this.state.eyesNames} mouthNum={this.state.mouthNum} mouthNames={this.state.mouthNames}></Canvas> 
-                <button className="Button-text Button-save" onClick={this.rngNumbers}>Save</button> 
+            <div className="u-flex u-flex-alignCenter u-flex-justifyCenter">
+                <div>
+                    <button className="Button-text Button-generate" onClick={this.rngNumbers}>Generate</button>
+                    <button className="Button-text Button-save" onClick={() => exportComponentAsPNG(this.componentRef, {fileName: "tree.png"})}>Save</button> 
+                </div>
+                 
+                <Canvas ref={this.componentRef} treeNum={this.state.treeNum} treeNames={this.state.treeNames} eyesNum={this.state.eyesNum} eyesNames={this.state.eyesNames} mouthNum={this.state.mouthNum} mouthNames={this.state.mouthNames}></Canvas> 
+                
             </div>
             );
     }   
