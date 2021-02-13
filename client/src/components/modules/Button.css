@@ -1,10 +1,9 @@
 .Button-generate{
-    /* Rectangle 1 */
     position: absolute;
     width: 260px;
-    height: 68px;
+    height: 70px;
     left: 50%;
-    top: 160px;
+    top: 150px;
     margin-left: -130px;
 
     background: rgba(217, 222, 222, 0.46);
@@ -13,8 +12,6 @@
 }
 
 .Button-text{
-    /* Click here! */
-
     position: absolute;
     font-family: Lato;
     font-style: normal;
@@ -24,4 +21,17 @@
     text-align: center;
     color: #000000;
 
+}
+
+.Button-save{
+    position: absolute;
+    width: 260px;
+    height: 68px;
+    left: 50%;
+    top: 720px;
+    margin-left: -130px;
+
+    background: rgba(217, 222, 222, 0.46);
+    border-radius: 10px;
+    border-width: 1px;
 }

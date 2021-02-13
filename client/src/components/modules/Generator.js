@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Canvas from "../modules/Canvas.js";
-
+import { exportComponentAsPNG } from 'react-component-export-image';
 
 import "./Generator.css";
 import "./Button.css";
@@ -49,7 +49,7 @@ class Generator extends Component {
             <div>
                 <button className="Button-text Button-generate" onClick={this.rngNumbers}>Generate</button> 
                 <Canvas treeNum={this.state.treeNum} treeNames={this.state.treeNames} eyesNum={this.state.eyesNum} eyesNames={this.state.eyesNames} mouthNum={this.state.mouthNum} mouthNames={this.state.mouthNames}></Canvas> 
-                {/* <button className="Button-text Button-save" onClick={this.rngNumbers}>Save</button> */} 
+                <button className="Button-text Button-save" onClick={this.rngNumbers}>Save</button> 
             </div>
             );
     }   
