@@ -1,0 +1,26 @@
+.Home-title{
+
+    /* Stanford Tree Generator */
+
+    position: absolute;
+    width: 769px;
+    height: 86px;
+    left: 50px;
+    top: 34px;
+
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 77px;
+
+    color: #000000;
+}
+
+.Home-logo{
+    position: absolute;
+    height: 90px;
+    left: 750px;
+    top: 30px;
+
+}

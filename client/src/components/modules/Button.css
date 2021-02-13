@@ -1,0 +1,27 @@
+.Button-generate{
+    /* Rectangle 1 */
+    position: absolute;
+    width: 260px;
+    height: 68px;
+    left: 50%;
+    top: 160px;
+    margin-left: -130px;
+
+    background: rgba(217, 222, 222, 0.46);
+    border-radius: 10px;
+    border-width: 1px;
+}
+
+.Button-text{
+    /* Click here! */
+
+    position: absolute;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 58px;
+    text-align: center;
+    color: #000000;
+
+}
