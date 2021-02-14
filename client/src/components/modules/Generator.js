@@ -12,11 +12,11 @@ class Generator extends Component {
         super(props);
         this.state={
             treeNum: 0,
-            treeNames: ["images/tree1.png", "images/tree2.png", "images/tree3.png"],
+            treeNames: ["images/tree1.png", "images/tree2.png", "images/tree3.png", "images/tree4.png", "images/tree5.png", "images/tree6.png", "images/tree7.png", "images/tree8.png", "images/tree9.png", "images/tree10.png", "images/tree11.png", "images/tree12.png"],
             eyesNum: 0,
-            eyesNames: ["images/eyes1.png", "images/eyes2.png", "images/eyes3.png"],
+            eyesNames: ["images/eyes1.png", "images/eyes2.png", "images/eyes3.png", "images/eyes4.png", "images/eyes5.png", "images/eyes6.png", "images/eyes7.png", "images/eyes8.png", "images/eyes9.png", "images/eyes10.png", "images/eyes11.png", "images/eyes12.png", "images/eyes13.png", "images/eyes14.png", "images/eyes15.png", "images/eyes16.png", "images/eyes17.png", "images/eyes18.png"],
             mouthNum: 0,
-            mouthNames: ["images/mouth1.png", "images/mouth2.png", "images/mouth3.png"],
+            mouthNames: ["images/mouth1.png", "images/mouth2.png", "images/mouth3.png", "images/mouth4.png", "images/mouth5.png", ],
             lastTime: Date.now(),
             currentTime: Date.now(),
             cycling: false,
@@ -101,6 +101,7 @@ class Generator extends Component {
                  
                 <Canvas ref={this.componentRef} treeNum={this.state.treeNum} treeNames={this.state.treeNames} eyesNum={this.state.eyesNum} eyesNames={this.state.eyesNames} mouthNum={this.state.mouthNum} mouthNames={this.state.mouthNames}></Canvas> 
             
+                <img src={"images/lock.svg"} className="Button-lock"></img>
                 <div>
                     {/* lock buttons */}
                     <button className={this.state.eyesLocked=== true ? "Button-lockEyes Button-lockEyesActive" : "Button-lockEyes"} onClick={this.onClickEyes}></button>
@@ -120,6 +121,7 @@ class Generator extends Component {
 
                 <Confetti recycle={false}></Confetti>
 
+                <img src={"images/lock.svg"} className="Button-lock"></img>
                 <div>
                     {/* lock buttons */}
                     <button className={this.state.eyesLocked=== true ? "Button-lockEyes Button-lockEyesActive" : "Button-lockEyes"} onClick={this.onClickEyes}></button>

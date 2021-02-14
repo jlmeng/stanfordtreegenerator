@@ -1,16 +1,10 @@
 .Home-title{
-
-    /* Stanford Tree Generator */
-
-/*     position: absolute; */
     position: absolute;
     width: 750px;
     height: 86px;
     left: 50%;
     top: 34px;
     margin-left: -384.5px;
-/*     left: 50px;
-     */
 
     font-family: Source Sans Pro;
     font-style: normal;
@@ -24,9 +18,6 @@
 .Home-logo{
     position: absolute;
     height: 90px;
-    /* left: 50%;
-    margin-left: 385px; */
     left: 30px;
     top: 30px;
-
 }
