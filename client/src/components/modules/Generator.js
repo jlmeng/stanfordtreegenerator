@@ -31,12 +31,8 @@ class Generator extends Component {
     async componentDidUpdate() {
         if (this.state.cycling === true) {
             if (this.state.counter < 15) {
-                
-                console.log(this.state.cycling);
-                console.log(this.state.speed);
                 const timer = setTimeout(() => {
                 this.rngOnce();
-                console.log(this.state.counter)
             }, this.state.speed);
             return () => clearTimeout(timer);
             }

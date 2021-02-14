@@ -33,3 +33,10 @@
     position:absolute;
     z-index: 3;
 }
+
+.Canvas-text {
+    position: absolute;
+    z-index: 0;
+    font-size: xx-small;
+    color: rgb(219, 214, 214);
+}

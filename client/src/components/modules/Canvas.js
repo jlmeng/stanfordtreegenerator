@@ -36,6 +36,9 @@ class Canvas extends Component {
                 <img className="Canvas-tree" src={this.props.treeNames[this.props.treeNum]}></img>
                 <img className="Canvas-eyes" src={this.props.eyesNames[this.props.eyesNum]}></img>
                 <img className="Canvas-mouth" src={this.props.mouthNames[this.props.mouthNum]}></img>
+            
+                <div className="Canvas-text">jk take a screenshot :P</div>
+            
             </div>
             );
     }   
