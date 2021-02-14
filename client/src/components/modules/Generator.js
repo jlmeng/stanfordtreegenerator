@@ -16,24 +16,63 @@ class Generator extends Component {
             eyesNames: ["images/eyes1.png", "images/eyes2.png", "images/eyes3.png"],
             mouthNum: 0,
             mouthNames: ["images/mouth1.png", "images/mouth2.png", "images/mouth3.png"],
-            time: Date.now()
+            lastTime: Date.now(),
+            currentTime: Date.now(),
+            cycling: false,
+            counter: 0,
+            speed: 100,
         }
         this.componentRef = React.createRef();
     }
 
-    componentDidMount() {
+    async componentDidUpdate() {
+        if (this.state.cycling === true) {
+
+            if (this.state.counter < 15) {
+                console.log(this.state.cycling);
+                console.log(this.state.speed);
+                const timer = setTimeout(() => {
+                this.rngOnce();
+                console.log(this.state.counter)
+            }, this.state.speed);
+            return () => clearTimeout(timer);
+            }
         
+            else {
+                this.setState({cycling: false, counter: 0, speed: 100});
+            }
+            
+ 
+        } 
+
+        /* else if (this.state.counter >= 10 && this.state.cycling === true) {
+            this.setState({cycling: false, counter: 0, speed: 100});
+        } */
+        /* const timer = setTimeout(() => {
+            if (this.state.cycling === true && this.state.counter < 30) {
+                this.rngOnce();
+                this.setState({counter: this.state.counter+1});
+                console.log(this.state.counter)
+                }  
+            
+            if (this.state.counter >= 30 && this.state.cycling === true) {
+                this.setState({cycling: false, counter: 0});
+            }
+          }, 100);
+          return () => clearTimeout(timer); */
     }
 
-    
+    startCycle = () => {
+        this.setState({cycling: true});
+    }
 
-    rngNumbers = () => {
+   /*  rngNumbers = () => {
         let lastTime = Date.now()
         let currentTime = Date.now()
         let counter = 0;
         while (counter < 10) {
             currentTime = Date.now()
-            /* console.log(currentTime); */
+          
             if (currentTime-lastTime > 100) {
                 this.rngOnce();
                 this.forceUpdate();
@@ -42,9 +81,9 @@ class Generator extends Component {
             }
         }
         
-    }
+    } */
 
-    async rngOnce() {
+    rngOnce = () => {
 
         const min = 0;
         const maxTree = this.state.treeNames.length;
@@ -65,8 +104,7 @@ class Generator extends Component {
                 while (randMouth === this.state.mouthNum) {
                     randMouth = min + Math.floor(Math.random() * (maxMouth - min));
                 }
-                this.setState({treeNum: randTree, eyesNum: randEyes, mouthNum: randMouth});
-
+                this.setState({treeNum: randTree, eyesNum: randEyes, mouthNum: randMouth, counter: this.state.counter+1, speed: (this.state.speed + (.7*(this.state.counter)**1.8))});
     }
 
     render() {
@@ -74,7 +112,7 @@ class Generator extends Component {
         return (
             <div className="u-flex u-flex-alignCenter u-flex-justifyCenter">
                 <div>
-                    <button className="Button-text Button-generate" onClick={this.rngNumbers}>Generate</button>
+                    <button className="Button-text Button-generate" onClick={this.startCycle}>Generate</button>
                     <button className="Button-text Button-save" onClick={() => exportComponentAsPNG(this.componentRef, {fileName: "tree.png"})}>Save</button> 
                 </div>
                  
