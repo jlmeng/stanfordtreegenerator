@@ -6,15 +6,20 @@
     top: 150px;
     margin-left: -285px;
 
-    background: rgba(217, 222, 222, 0.46);
+    background: rgba(235, 169, 169, 0.582);
     border-color: rgb(163, 163, 163);
     border-radius: 10px;
     border-width: 1px;
 }
 
+.Button-generate:focus{
+    outline: none;
+    box-shadow: none;
+}
+
 .Button-text{
     position: absolute;
-    font-family: Lato;
+    font-family: Source Sans Pro;
     font-style: normal;
     font-weight: normal;
     font-size: 36px;
@@ -38,3 +43,95 @@
     border-width: 1px;
 
 }
+
+.Button-save:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.Button-lockEyes{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 50%;
+    top: 700px;
+    margin-left: -150px;
+
+    background: rgba(217, 222, 222, 0.46);
+    background-image: url(../../public/eyes.svg);
+    background-size: 33%;
+    border-color: rgb(163, 163, 163);
+    border-radius: 10px;
+    border-width: 1px;
+}
+
+.Button-lockEyesActive{
+    border-width: 4px;
+    width: 76px;
+    height: 76px;
+    top: 697px;
+    margin-left: -153px;
+}
+
+.Button-lockEyes:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+.Button-lockTree{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 50%;
+    top: 700px;
+    margin-left: -35px;
+
+    background: rgba(217, 222, 222, 0.46);
+    background-image: url(../../public/christmas-tree.svg);
+    background-size: 35%;
+    border-color: rgb(163, 163, 163);
+    border-radius: 10px;
+    border-width: 1px;
+}
+
+.Button-lockTreeActive{
+    border-width: 4px;
+    width: 76px;
+    height: 76px;
+    top: 697px;
+    margin-left: -38px;
+}
+
+.Button-lockTree:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+.Button-lockMouth{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 50%;
+    top: 700px;
+    margin-left: 75px;
+
+    background: rgba(217, 222, 222, 0.46);
+    background-image: url(../../public/mouth.svg);
+    background-size: 33%;
+    border-color: rgb(163, 163, 163);
+    border-radius: 10px;
+    border-width: 1px;
+}
+
+.Button-lockMouthActive{
+    border-width: 4px;
+    width: 76px;
+    height: 76px;
+    top: 697px;
+    margin-left: 72px;
+}
+
+.Button-lockMouth:focus {
+    outline: none;
+    box-shadow: none;
+  }

@@ -13,14 +13,16 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        document.title = "Home";
+        document.title = "trees!!!";
     }
 
     render() {
         return (
-            <div className="u-flex">
-                <div className = "Home-title">Stanford Tree Generator</div>
-                <img className = "Home-logo" src={"images/stanfordtree.PNG"}></img>     
+            <div className="u-flex u-textCenter">
+                <div className="u-flex u-textCenter u-flex-alignCenter u-flex-justifyCenter">
+                    <div className = "Home-title">which <span style={{fontWeight: "bold", color: "#8c1515"}}>sTaNfoRD</span> tree are you?</div>
+                    <img className = "Home-logo u-inlineBlock" src={"images/stanfordtree.PNG"}></img> 
+                </div>     
                 <Generator></Generator>   
             </div>
             );

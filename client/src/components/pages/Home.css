@@ -2,16 +2,20 @@
 
     /* Stanford Tree Generator */
 
+/*     position: absolute; */
     position: absolute;
-    width: 769px;
+    width: 750px;
     height: 86px;
-    left: 50px;
+    left: 50%;
     top: 34px;
+    margin-left: -384.5px;
+/*     left: 50px;
+     */
 
-    font-family: Lato;
+    font-family: Source Sans Pro;
     font-style: normal;
     font-weight: normal;
-    font-size: 64px;
+    font-size: 54px;
     line-height: 77px;
 
     color: #000000;
@@ -20,7 +24,9 @@
 .Home-logo{
     position: absolute;
     height: 90px;
-    left: 750px;
+    /* left: 50%;
+    margin-left: 385px; */
+    left: 30px;
     top: 30px;
 
 }

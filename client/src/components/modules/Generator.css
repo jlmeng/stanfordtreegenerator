@@ -6,3 +6,8 @@
     left: 586px;
     top: 199px;
 }
+
+.Generator-lockButtons{
+    position: absolute;
+    top: 700px;
+}
