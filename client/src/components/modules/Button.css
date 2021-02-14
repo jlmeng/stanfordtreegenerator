@@ -3,7 +3,7 @@
     width: 260px;
     height: 70px;
     left: 50%;
-    top: 150px;
+    top: 145px;
     margin-left: -285px;
 
     background: rgba(235, 169, 169, 0.582);
@@ -32,9 +32,9 @@
 .Button-save{
     position: absolute;
     width: 260px;
-    height: 68px;
+    height: 70px;
     left: 50%;
-    top: 150px;
+    top: 145px;
     margin-left: 15px;
 
     background: rgba(0, 150, 136, 0.17);
@@ -71,6 +71,9 @@
     height: 76px;
     top: 697px;
     margin-left: -153px;
+    background:  rgba(0, 150, 136, 0.30);
+    background-image: url(../../public/eyes.svg);
+    background-size: 33%;
 }
 
 .Button-lockEyes:focus {
@@ -100,6 +103,9 @@
     height: 76px;
     top: 697px;
     margin-left: -38px;
+    background: rgba(162, 207, 158, 0.46);
+    background-image: url(../../public/christmas-tree.svg);
+    background-size: 33%;
 }
 
 .Button-lockTree:focus {
@@ -115,7 +121,7 @@
     top: 700px;
     margin-left: 75px;
 
-    background: rgba(217, 222, 222, 0.46);
+    background: rgba(222, 217, 222, 0.46);
     background-image: url(../../public/mouth.svg);
     background-size: 33%;
     border-color: rgb(163, 163, 163);
@@ -129,6 +135,11 @@
     height: 76px;
     top: 697px;
     margin-left: 72px;
+    background: rgba(235, 169, 169, 0.582);
+    background-image: url(../../public/mouth.svg);
+    background-size: 33%;
+    
+    
 }
 
 .Button-lockMouth:focus {
