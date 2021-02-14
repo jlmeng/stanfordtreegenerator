@@ -38,10 +38,6 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.svg$/,
-        use: ['@svgf/webpack']
-      },
-      {
         test: /\.(scss|css)$/,
         use: [
           {
