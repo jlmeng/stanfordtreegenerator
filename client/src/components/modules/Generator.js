@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Canvas from "../modules/Canvas.js";
-import { exportComponentAsSVG, exportComponentAsJPEG } from 'react-component-export-image';
+import { exportComponentAsPNG } from 'react-component-export-image';
 import Confetti from 'react-confetti';
 import useWindowSize from 'react-use/lib/useWindowSize';
 
@@ -31,8 +31,12 @@ class Generator extends Component {
     async componentDidUpdate() {
         if (this.state.cycling === true) {
             if (this.state.counter < 15) {
+                
+                console.log(this.state.cycling);
+                console.log(this.state.speed);
                 const timer = setTimeout(() => {
                 this.rngOnce();
+                console.log(this.state.counter)
             }, this.state.speed);
             return () => clearTimeout(timer);
             }
@@ -90,7 +94,7 @@ class Generator extends Component {
             <div className="u-flex u-flex-alignCenter u-flex-justifyCenter">
                 <div>
                     <button className="Button-text Button-generate" onClick={this.startCycle}>Generate</button>
-                    <button className="Button-text Button-save" onClick={() => exportComponentAsJPEG(this.componentRef, {fileName: "tree.jpeg"})}>Save</button> 
+                    <button className="Button-text Button-save" onClick={() => exportComponentAsPNG(this.componentRef, {fileName: "tree.png"})}>Save</button> 
                 </div>
                  
                 <Canvas ref={this.componentRef} treeNum={this.state.treeNum} treeNames={this.props.treeNames} eyesNum={this.state.eyesNum} eyesNames={this.props.eyesNames} mouthNum={this.state.mouthNum} mouthNames={this.props.mouthNames}></Canvas> 
@@ -108,7 +112,7 @@ class Generator extends Component {
             <div className="u-flex u-flex-alignCenter u-flex-justifyCenter">
                 <div>
                     <button className="Button-text Button-generate" onClick={this.startCycle}>Generate</button>
-                    <button className="Button-text Button-save" onClick={() => exportComponentAsJPEG(this.componentRef, {fileName: "tree_".concat(this.state.eyesNum).concat("_").concat(this.state.treeNum).concat("_").concat(this.state.mouthNum).concat(".jpeg") })}>Save</button> 
+                    <button className="Button-text Button-save" onClick={() => exportComponentAsPNG(this.componentRef, {fileName: "tree_".concat(this.state.eyesNum).concat("_").concat(this.state.treeNum).concat("_").concat(this.state.mouthNum).concat(".png") })}>Save</button> 
                 </div>
                 
                 <Canvas ref={this.componentRef} treeNum={this.state.treeNum} treeNames={this.props.treeNames} eyesNum={this.state.eyesNum} eyesNames={this.props.eyesNames} mouthNum={this.state.mouthNum} mouthNames={this.props.mouthNames} done={this.state.done}></Canvas> 
