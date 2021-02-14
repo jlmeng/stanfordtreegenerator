@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Canvas from "../modules/Canvas.js";
 import { exportComponentAsPNG } from 'react-component-export-image';
 import Confetti from 'react-confetti';
+import useWindowSize from 'react-use/lib/useWindowSize';
 
 import "./Generator.css";
 import "./Button.css";
