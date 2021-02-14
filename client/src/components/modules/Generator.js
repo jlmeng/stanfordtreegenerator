@@ -111,7 +111,7 @@ class Generator extends Component {
                     <button className="Button-text Button-save" onClick={() => exportComponentAsJPEG(this.componentRef, {fileName: "tree_".concat(this.state.eyesNum).concat("_").concat(this.state.treeNum).concat("_").concat(this.state.mouthNum).concat(".jpeg") })}>Save</button> 
                 </div>
                 
-                <Canvas ref={this.componentRef} treeNum={this.state.treeNum} treeNames={this.props.treeNames} eyesNum={this.state.eyesNum} eyesNames={this.props.eyesNames} mouthNum={this.state.mouthNum} mouthNames={this.props.mouthNames}></Canvas> 
+                <Canvas ref={this.componentRef} treeNum={this.state.treeNum} treeNames={this.props.treeNames} eyesNum={this.state.eyesNum} eyesNames={this.props.eyesNames} mouthNum={this.state.mouthNum} mouthNames={this.props.mouthNames} done={this.state.done}></Canvas> 
 
                 <Confetti recycle={false}></Confetti>
 
