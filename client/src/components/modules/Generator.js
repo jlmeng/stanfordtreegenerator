@@ -112,7 +112,7 @@ class Generator extends Component {
             <div className="u-flex u-flex-alignCenter u-flex-justifyCenter">
                 <div>
                     <button className="Button-text Button-generate" onClick={this.startCycle}>Generate</button>
-                    <button className="Button-text Button-save" onClick={() => exportComponentAsPNG(this.componentRef, {fileName: "tree.png"})}>Save</button> 
+                    <button className="Button-text Button-save" onClick={() => exportComponentAsPNG(this.componentRef, {fileName: "tree_".concat(this.state.eyesNum).concat("_").concat(this.state.treeNum).concat("_").concat(this.state.mouthNum).concat(".png") })}>Save</button> 
                 </div>
                 
                 <Canvas ref={this.componentRef} treeNum={this.state.treeNum} treeNames={this.props.treeNames} eyesNum={this.state.eyesNum} eyesNames={this.props.eyesNames} mouthNum={this.state.mouthNum} mouthNames={this.props.mouthNames}></Canvas> 
