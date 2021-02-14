@@ -13,6 +13,23 @@ class Canvas extends Component {
         }
     }
 
+    componentDidMount() {
+        this.props.eyesNames.forEach((picture) => {
+            const img = new Image();
+            img.src = picture.fileName;
+        });
+
+        this.props.treeNames.forEach((picture) => {
+            const img = new Image();
+            img.src = picture.fileName;
+        });
+
+        this.props.mouthNames.forEach((picture) => {
+            const img = new Image();
+            img.src = picture.fileName;
+        });
+    }
+
     render() {
         return (
             <div className="Canvas-container">

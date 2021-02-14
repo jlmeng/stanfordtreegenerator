@@ -27,23 +27,6 @@ class Generator extends Component {
         this.componentRef = React.createRef();
     }
 
-    componentDidMount() {
-        this.props.eyesNames.forEach((picture) => {
-            const img = new Image();
-            img.src = picture.fileName;
-        });
-
-        this.props.treeNames.forEach((picture) => {
-            const img = new Image();
-            img.src = picture.fileName;
-        });
-
-        this.props.mouthNames.forEach((picture) => {
-            const img = new Image();
-            img.src = picture.fileName;
-        });
-    }
-
     async componentDidUpdate() {
         if (this.state.cycling === true) {
             if (this.state.counter < 15) {
